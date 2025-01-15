@@ -238,14 +238,14 @@ function App() {
                 USDT
               </button>
               <button
-                onClick={() => setSelectedPayment("CREDITO")}
+                onClick={() => setSelectedPayment("CREDIT")}
                 className={`flex-1 h-12 font-normal text-white border border-white rounded ${
-                  selectedPayment === "CREDITO"
+                  selectedPayment === "CREDIT"
                     ? "bg-gradient-to-r from-teal-500 to-teal-700"
                     : "bg-transparent"
                 } transition-colors`}
               >
-                CREDITO
+                CREDIT
               </button>
             </div>
 
@@ -254,14 +254,15 @@ function App() {
               <input
                 type="number"
                 placeholder="Investment value"
-                className="flex-grow h-12 px-4 text-black rounded border border-gray-300 mb[-5] focus:outline-none focus:ring-0 focus:ring-blue-500"
+                className="flex-grow h-12 px-4 text-black rounded border border-gray-300 focus:outline-none focus:ring-0 focus:ring-blue-500"
                 value={dollarAmount}
                 onChange={(e) => setDollarAmount(e.target.value)}
-                 style={{fontWeight: 'bold'}}
+                style={{fontWeight: 'bold', width: 'calc(100% - 100px)'}}
               />
-              <button
+             <button
                 onClick={handleMaxClick}
                 className="w-24 h-12 bg-gradient-to-r from-teal-500 to-teal-700 hover:bg-gradient-to-l text-white font-bold border border-white rounded"
+                style={{whiteSpace: 'nowrap'}}
               >
                 MAX
               </button>
